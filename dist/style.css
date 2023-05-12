@@ -1,0 +1,88 @@
+:root {
+  --text-color: #ffffff;
+  --grey-color: #808080;
+}
+
+* {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #00000090 url('../src/img/main.jpg') no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
+#content {
+  
+  height: 100svh;
+  width: 100%;
+  position: relative;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+}
+
+#website-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 250px;
+}
+
+#website-menu li {
+  position: relative;
+  cursor: pointer;
+}
+
+#website-menu li::after { /*animated underline*/
+  content: '';
+  background-color: white;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all .15s ease-out;
+}
+
+#website-menu li:hover::after {
+  transform: scaleX(1);
+}
+
+#website-logo {
+  font-size: 2.5rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+#home-page {
+  align-items: center;
+  display: flex;
+  padding-left: 10%;
+  height: 700px;
+}
+
+#home-page h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+footer {
+  align-items: center;
+  background-color: #00000082;
+  color: var(--grey-color);
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
