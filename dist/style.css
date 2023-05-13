@@ -65,18 +65,47 @@ header {
   font-family: 'Great Vibes', cursive;
 }
 
-#home-page {
+/*Home page*/
+
+.main-wrapper {
   align-items: center;
   display: flex;
-  padding-left: 10%;
   height: 700px;
 }
 
-#home-page h1 {
+.main-wrapper h1 {
   font-weight: 400;
   font-size: 4rem;
   font-family: 'Great Vibes', cursive;
 }
+
+
+#home-page {
+  padding-left: 10%;
+}
+/*Contacts page*/
+
+#about-page {
+  justify-content: center;
+}
+
+#about-wrapper {
+  align-items: center;
+  background-color: #000000c8;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
+  width: 900px;
+}
+
+#about-wrapper p{
+  font-size: 1.6rem;
+  margin: 10px 60px;
+}
+
+/*Footer*/
 
 footer {
   align-items: center;

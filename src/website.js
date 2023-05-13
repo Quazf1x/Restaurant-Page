@@ -1,14 +1,15 @@
 const globalContainer = document.querySelector('#content');
+const mainSection = document.createElement('main');
+mainSection.classList.add('main-wrapper');
 
 function createHeader() {
   const header = document.createElement('header');
   //create navigation list
   const navList = document.createElement('ul');
-  const navItems = ['Home', 'Menu', 'Contacts'];
+  const navItems = ['Home', 'Menu', 'About'];
 
   navList.setAttribute('id','website-menu');
   navItems.forEach(item => {
-    // navList.appendChild(document.createElement('li', item));
     var itemList = document.createElement('li');
     itemList.textContent = item;
     navList.appendChild(itemList);
@@ -32,4 +33,4 @@ function createFooter() {
   globalContainer.appendChild(footer);
 }
 export default globalContainer;
-export { createHeader, createFooter };
+export { createHeader, createFooter, mainSection };

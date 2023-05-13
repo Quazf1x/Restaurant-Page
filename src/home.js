@@ -1,7 +1,6 @@
-import globalContainer from "./website";
+import globalContainer, { mainSection } from './website';
 
 function createHomePage() {
-  const mainSection = document.createElement('main');
   const textWrapper = document.createElement('div');
   const firstHomeLine = document.createElement('h1');
   const secondHomeLine = document.createElement('h1');
@@ -17,4 +16,4 @@ function createHomePage() {
   globalContainer.appendChild(mainSection);
 }
 
-export { createHomePage };
+export default createHomePage;

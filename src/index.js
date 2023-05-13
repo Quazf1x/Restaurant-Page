@@ -1,6 +1,8 @@
 import { createHeader, createFooter } from './website.js';
-import { createHomePage } from './home.js';
+import createAbout from './about.js';
+import  createHomePage  from './home.js';
 
-createHeader();
-createHomePage();
-createFooter();
+  createHeader();
+  createAbout();
+  //createHomePage();
+  createFooter();
