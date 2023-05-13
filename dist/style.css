@@ -1,6 +1,7 @@
 :root {
   --text-color: #ffffff;
   --grey-color: #808080;
+  --black-opacity-color:#000000c8;
 }
 
 * {
@@ -70,7 +71,7 @@ header {
 .main-wrapper {
   align-items: center;
   display: flex;
-  height: 700px;
+  min-height: 700px;
 }
 
 .main-wrapper h1 {
@@ -83,6 +84,52 @@ header {
 #home-page {
   padding-left: 10%;
 }
+
+/*Menu page*/
+
+#menu-page {
+  justify-content: center;
+}
+
+#menu-grid-wrapper {
+  background-color: var(--black-opacity-color);
+  display: grid;
+  gap: 40px;
+  grid-template: 1fr / repeat(auto-fill,minmax(350px,1fr));
+  padding: 30px;
+  width: 90%;
+}
+
+.menu-card{
+  background: url('../src/img/menu/1.jpg') 50%;
+  background-size: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  height: 500px;
+}
+
+.menu-card::after {
+  background-color: var(--black-opacity-color);
+  font-size: 1.2rem;
+  content: 'Some Tasty Meal';
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 10px 20px;
+  transition: all .2s;
+}
+
+.menu-card:hover::after {
+  opacity: 1;
+}
+
+
 /*Contacts page*/
 
 #about-page {
@@ -91,7 +138,7 @@ header {
 
 #about-wrapper {
   align-items: center;
-  background-color: #000000c8;
+  background-color: var(--black-opacity-color);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -113,5 +160,6 @@ footer {
   color: var(--grey-color);
   display: flex;
   justify-content: center;
+  margin-top: 10px;
   height: 40px;
 }
