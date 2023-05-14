@@ -10,7 +10,7 @@ function createHeader() {
 
   navList.setAttribute('id','website-menu');
   navItems.forEach(item => {
-    var itemList = document.createElement('li');
+    const itemList = document.createElement('li');
     itemList.textContent = item;
     navList.appendChild(itemList);
   });
@@ -29,7 +29,7 @@ function createHeader() {
 
 function createFooter() {
   const footer = document.createElement('footer');
-  footer.textContent = 'Photo by Pixzolo Photography on Unsplash';
+  footer.textContent = 'Background photo by Pixzolo Photography, menu photos by Mae Mu  on Unsplash';
   globalContainer.appendChild(footer);
 }
 export default globalContainer;

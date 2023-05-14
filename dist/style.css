@@ -109,7 +109,7 @@ header {
   height: 500px;
 }
 
-.menu-card::after {
+.menu-card-overlay {
   background-color: var(--black-opacity-color);
   font-size: 1.2rem;
   content: 'Some Tasty Meal';
@@ -121,12 +121,16 @@ header {
   right: 0;
   bottom: 0;
 
-  padding: 10px 20px;
+  padding: 40px;
   transition: all .2s;
 }
 
-.menu-card:hover::after {
+.menu-card:hover .menu-card-overlay {
   opacity: 1;
+}
+
+.menu-card-overlay p {
+  margin: 10px 0;
 }
 
 
@@ -160,6 +164,6 @@ footer {
   color: var(--grey-color);
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 30px;
   height: 40px;
 }
