@@ -1,4 +1,4 @@
-import globalContainer, { mainSection } from './website';
+import globalContainer, { mainSection } from './website.js';
 
 let menuItems = [{
     name: 'Tasty',
