@@ -4,9 +4,9 @@ import createAbout from './about.js';
 import  createHomePage  from './home.js';
 
   function renderPage(pageFunction) {
-    document.querySelector('#content').innerHTML = '';
+    document.querySelector('#content').innerHTML = ' ';
     createHeader();
-    //pageFunction();
+    pageFunction();
     createFooter();
   }
 
@@ -25,10 +25,3 @@ import  createHomePage  from './home.js';
   });
 
   renderPage(createHomePage);
-
-  // createHeader();
-  // createMenu();
-  // createAbout();
-  // createHomePage();
-  // createFooter();
-

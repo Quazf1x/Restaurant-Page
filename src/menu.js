@@ -1,4 +1,4 @@
-import globalContainer, { mainSection } from './website.js';
+import globalContainer, { createHtmlElement } from './website.js';
 
 let menuItems = [{
     name: 'Tasty',
@@ -40,32 +40,23 @@ let menuItems = [{
 
 
 function createMenu() {
-  const menuGrid = document.createElement('div');
+  const menuGrid = createHtmlElement('div', 'menu-grid-wrapper', null, null);
+  const mainSection = createHtmlElement('main', 'menu-page', 'main-wrapper', null);
   
   menuItems.forEach(item => {
-    const itemCard = document.createElement('div');
-    itemCard.classList.add('menu-card');
+    //Create elements
+    const itemCard = createHtmlElement('div', null, 'menu-card', null);
     itemCard.style.backgroundImage = `url("${item['img']}")`;
 
-    const itemCardOverlay = document.createElement('div');
-    itemCardOverlay.classList.add('menu-card-overlay');
-
-    const itemName = document.createElement('h2');
-    itemName.textContent = item['name'];
-
-    const itemDescription = document.createElement('p');
-    itemDescription.textContent = item['description'];
-
-    const itemPrice = document.createElement('p');
-    itemPrice.textContent = item['price'];
-
+    const itemCardOverlay = createHtmlElement('div', null, 'menu-card-overlay', null);
+    const itemName = createHtmlElement('h2', null, null, item['name']);
+    const itemDescription = createHtmlElement('p', null, null, item['description']);
+    const itemPrice = createHtmlElement('p', null, null, item['price']);
+    //Append Elements
     itemCardOverlay.append(itemName, itemDescription, itemPrice);
     itemCard.appendChild(itemCardOverlay);
     menuGrid.appendChild(itemCard);
   });
-
-  mainSection.setAttribute('id', 'menu-page');
-  menuGrid.setAttribute('id', 'menu-grid-wrapper');
 
   mainSection.appendChild(menuGrid);
   globalContainer.appendChild(mainSection);

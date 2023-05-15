@@ -1,14 +1,12 @@
-import globalContainer, { mainSection } from './website';
+import globalContainer, { createHtmlElement } from './website';
 
 function createHomePage() {
-  const textWrapper = document.createElement('div');
-  const firstHomeLine = document.createElement('h1');
-  const secondHomeLine = document.createElement('h1');
-
-  mainSection.setAttribute('id', 'home-page');
-  firstHomeLine.textContent = 'Made by us.';
-  secondHomeLine.textContent = 'Enjoyed by Everyone.';
-
+  //Create elements
+  const mainSection = createHtmlElement('main', 'home-page', 'main-wrapper', null);
+  const textWrapper = createHtmlElement('div', null, null, null);
+  const firstHomeLine = createHtmlElement('h1', null, null, 'Made by us.');
+  const secondHomeLine = createHtmlElement('h1', null, null, 'Enjoyed by Everyone.');
+  //Append elements
   textWrapper.appendChild(firstHomeLine);
   textWrapper.appendChild(secondHomeLine);
   mainSection.appendChild(textWrapper);

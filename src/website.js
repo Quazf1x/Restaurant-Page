@@ -1,36 +1,37 @@
 const globalContainer = document.querySelector('#content');
-const mainSection = document.createElement('main');
-mainSection.classList.add('main-wrapper');
+
+//Function that is used to create most elements
+function createHtmlElement(type, id, classes, content) {
+  const element = document.createElement(type);
+  element.setAttribute('id', id);
+  element.classList.add(classes);
+  element.textContent = content;
+  return element;
+}
 
 function createHeader() {
-  const header = document.createElement('header');
+  const header = createHtmlElement('header', null, null, null);
   //create navigation list
-  const navList = document.createElement('ul');
+  const navList = createHtmlElement('ul', 'website-menu', null, null);
   const navItems = ['Home', 'Menu', 'About'];
 
-  navList.setAttribute('id','website-menu');
   navItems.forEach(item => {
-    const itemList = document.createElement('li');
-    itemList.textContent = item;
+    const itemList = createHtmlElement('li', null, null, item);
     navList.appendChild(itemList);
   });
 
-  header.appendChild(navList);
-
   //create logo
-  const websiteLogo = document.createElement('span');
-  websiteLogo.setAttribute('id', 'website-logo');
-  websiteLogo.textContent = 'Pizzaria';
-  header.appendChild(websiteLogo);
+  const websiteLogo = createHtmlElement('span', 'website-logo', null, 'Pizzaria');
 
   //add elements to the page
+  header.appendChild(navList);
+  header.appendChild(websiteLogo);
   globalContainer.appendChild(header);
 }
 
 function createFooter() {
-  const footer = document.createElement('footer');
-  footer.textContent = 'Background photo by Pixzolo Photography, menu photos by Mae Mu  on Unsplash';
+  const footer = createHtmlElement('footer', null, null, 'Background photo by Pixzolo Photography, menu photos by Mae Mu  on Unsplash');
   globalContainer.appendChild(footer);
 }
 export default globalContainer;
-export { createHeader, createFooter, mainSection };
+export { createHeader, createFooter, createHtmlElement };
