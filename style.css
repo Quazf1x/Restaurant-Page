@@ -12,7 +12,7 @@
 }
 
 body {
-  background: #00000090 url('../src/img/main.jpg') no-repeat;
+  background: #00000090 no-repeat;
   background-size: cover;
   background-blend-mode: darken;
   background-attachment: fixed;
