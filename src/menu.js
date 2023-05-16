@@ -1,39 +1,46 @@
 import globalContainer, { createHtmlElement } from './website.js';
+import img1 from '../src/img/menu/1.jpg';
+import img2 from '../src/img/menu/2.jpg';
+import img3 from '../src/img/menu/3.jpg';
+import img4 from '../src/img/menu/4.jpg';
+import img5 from '../src/img/menu/5.jpg';
+import img6 from '../src/img/menu/6.jpg';
+
 
 let menuItems = [{
     name: 'Tasty',
     description: 'Very Yummy!',
-    img: '../src/img/menu/1.jpg',
+    img: img1,
     price: '15$'
   },
   {
     name: 'Waffles',
     description: 'Delicious!',
-    img: '../src/img/menu/2.jpg',
+    img: img2,
     price: '7$'
   },
   {
     name: 'Burger',
     description: 'Very good!',
-    img: '../src/img/menu/3.jpg',
+    img: img3,
     price: '25$'
   },
   {
     name: 'Some pie',
     description: 'So cool!',
-    img: '../src/img/menu/4.jpg',
+    img: img4,
     price: '18$'
   },
   {
     name: 'Soup',
     description: 'Looks interesting!',
-    img: '../src/img/menu/5.jpg',
+    img: img5,
     price: '52$'
   },
   {
     name: 'Shrimps',
     description: 'Ehhhh...',
-    img: '../src/img/menu/6.jpg',
+    img: img6,
     price: '69$'
   }
 ];

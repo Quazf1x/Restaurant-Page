@@ -2,6 +2,7 @@ import { createHeader, createFooter } from './website.js';
 import createMenu from './menu.js';
 import createAbout from './about.js';
 import  createHomePage  from './home.js';
+import backgroundImg from '../src/img/main.jpg';
 
   function renderPage(pageFunction) {
     document.querySelector('#content').innerHTML = ' ';
@@ -24,4 +25,5 @@ import  createHomePage  from './home.js';
     }
   });
 
+  document.querySelector('body').style.backgroundImage = `url("${backgroundImg}")`;
   renderPage(createHomePage);
